@@ -189,6 +189,316 @@ function drawNetwork(){
 const originalDrawNetwork=drawNetwork;
 drawNetwork=function(){originalDrawNetwork();const svg=document.querySelector('.wires');if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const paths=[...svg.querySelectorAll('path')];paths.forEach((path,i)=>{if(i%2!==0)return;const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('r',i%4===0?'2.3':'1.6');dot.setAttribute('class','particle');const motion=document.createElementNS('http://www.w3.org/2000/svg','animateMotion');motion.setAttribute('dur',(7+i%5)+'s');motion.setAttribute('begin',(-i*.8)+'s');motion.setAttribute('repeatCount','indefinite');motion.setAttribute('path',path.getAttribute('d'));dot.append(motion);svg.append(dot)});};
 drawNetwork();window.addEventListener('resize',drawNetwork);
+  /* =========================================================
+   SUNNY PORTFOLIO — LANGUAGE SYSTEM
+   English / Traditional Chinese / Simplified Chinese
+   ========================================================= */
+
+const homeTranslations = {
+  en: {
+    navPath: "Path",
+    navResume: "Resume",
+    navContact: "Contact ↗",
+
+    topRight: "Different experiences. One connected path.",
+
+    heroEyebrow: "HELLO, I'M SUNNY.",
+    heroTitle: 'I turn customer needs<br><em>into solutions.</em>',
+    heroText: "Connecting technology, products, and customers to create practical commercial value.",
+    heroResume: "View Resume",
+    heroTalk: "Let's talk ↗",
+
+    aiSmall: "AI & PRODUCT",
+    aiTitle: "Turn needs into products",
+    aiSub: "ByteDance · Baidu　＋",
+
+    salesSmall: "SALES & CUSTOMERS",
+    salesTitle: "Understand the client's business",
+    salesSub: "Tencent Ads　＋",
+
+    scienceSmall: "SCIENCE & VENTURES",
+    scienceTitle: "Bring technology to market",
+    scienceSub: "Research · Ventures · Product Innovation　＋",
+
+    financeSmall: "FINANCE & TRUST",
+    financeTitle: "Build trust through understanding",
+    financeSub: "JoinQuant　＋",
+
+    aboutSmall: "START HERE / ABOUT SUNNY",
+    aboutTitle: "Start here",
+    aboutSub: "My direction and growing path　＋",
+
+    lifeSmall: "BEYOND WORK",
+    lifeTitle: "Beyond work ✦",
+    lifeSub: "Dance, music, and another side of Sunny　＋",
+
+    byte: "AI Agent · Product Operations",
+    baidu: "LLM · Commercialization",
+    tencent: "Client Management · Ad Solutions",
+    join: "Institutional Channels · Roadshows",
+    tools: "Dashboards · Automation",
+
+    ventureName: "Oxygen Qingshan",
+    venture: "Chemistry · Entrepreneurship",
+
+    milkName: "Mengniu Self-heating Milk",
+    milk: "Heating Core · Marketing Innovation",
+
+    siemens: "Industrial Sales · Exhibitions",
+    ey: "AI Application · Innovation Challenge",
+
+    mapFoot: "Enter through one perspective, then follow the connections across my experience.",
+    lowerLeft: "Science-minded. Customer-led.",
+    lowerPath: "Full Growing Path",
+    lowerCases: "Selected Cases"
+  },
+
+  "zh-HK": {
+    navPath: "成長路徑",
+    navResume: "查看履歷",
+    navContact: "聯絡我 ↗",
+
+    topRight: "不同經歷，彼此連結。",
+
+    heroEyebrow: "你好，我是 SUNNY。",
+    heroTitle: '把客戶需求<br><em>轉化為解決方案。</em>',
+    heroText: "在技術、產品與客戶之間，找到新的可能。",
+    heroResume: "查看履歷",
+    heroTalk: "聯絡我 ↗",
+
+    aiSmall: "AI & PRODUCT",
+    aiTitle: "把需求變成產品",
+    aiSub: "ByteDance · Baidu　＋",
+
+    salesSmall: "SALES & CUSTOMERS",
+    salesTitle: "走進客戶的業務",
+    salesSub: "Tencent Ads　＋",
+
+    scienceSmall: "SCIENCE & VENTURES",
+    scienceTitle: "讓技術走向市場",
+    scienceSub: "科研 · 創業 · 產品創新　＋",
+
+    financeSmall: "FINANCE & TRUST",
+    financeTitle: "以理解建立信任",
+    financeSub: "JoinQuant　＋",
+
+    aboutSmall: "START HERE / ABOUT SUNNY",
+    aboutTitle: "從這裡認識我",
+    aboutSub: "我的方向與成長路徑　＋",
+
+    lifeSmall: "BEYOND WORK",
+    lifeTitle: "工作以外的我 ✦",
+    lifeSub: "跳舞、唱歌，還有另一面的 Sunny　＋",
+
+    byte: "AI Agent · 產品營運",
+    baidu: "大模型 · 商業化",
+    tencent: "客戶經營 · 廣告方案",
+    join: "機構渠道 · 路演",
+    tools: "看板 · 自動化",
+
+    ventureName: "氧清山",
+    venture: "化學技術 · 創業",
+
+    milkName: "蒙牛自熱奶",
+    milk: "加熱芯 · 營銷創意",
+
+    siemens: "工業銷售 · 展會",
+    ey: "AI 應用 · 創新挑戰",
+
+    mapFoot: "從一個視角走進一段經歷，再沿著連結繼續探索。",
+    lowerLeft: "Science-minded. Customer-led.",
+    lowerPath: "完整成長路徑",
+    lowerCases: "精選案例"
+  },
+
+  "zh-CN": {
+    navPath: "成长路径",
+    navResume: "查看简历",
+    navContact: "联系我 ↗",
+
+    topRight: "不同经历，相互连接。",
+
+    heroEyebrow: "你好，我是 SUNNY。",
+    heroTitle: '把客户需求<br><em>转化为解决方案。</em>',
+    heroText: "在技术、产品与客户之间，找到新的可能。",
+    heroResume: "查看简历",
+    heroTalk: "联系我 ↗",
+
+    aiSmall: "AI & PRODUCT",
+    aiTitle: "把需求变成产品",
+    aiSub: "ByteDance · Baidu　＋",
+
+    salesSmall: "SALES & CUSTOMERS",
+    salesTitle: "走进客户的生意",
+    salesSub: "Tencent Ads　＋",
+
+    scienceSmall: "SCIENCE & VENTURES",
+    scienceTitle: "让技术走向市场",
+    scienceSub: "科研 · 创业 · 产品创新　＋",
+
+    financeSmall: "FINANCE & TRUST",
+    financeTitle: "用理解建立信任",
+    financeSub: "JoinQuant　＋",
+
+    aboutSmall: "START HERE / ABOUT SUNNY",
+    aboutTitle: "认识我，从这里开始",
+    aboutSub: "我的方向与成长路径　＋",
+
+    lifeSmall: "BEYOND WORK",
+    lifeTitle: "工作之外的我 ✦",
+    lifeSub: "跳舞、唱歌，还有另一面的 Sunny　＋",
+
+    byte: "AI Agent · 产品运营",
+    baidu: "大模型 · 商业化",
+    tencent: "客户经营 · 广告方案",
+    join: "机构渠道 · 路演",
+    tools: "看板 · 自动化",
+
+    ventureName: "氧清山",
+    venture: "化学技术 · 创业",
+
+    milkName: "蒙牛自热奶",
+    milk: "加热芯 · 营销创意",
+
+    siemens: "工业销售 · 展会",
+    ey: "AI 应用 · 创新挑战",
+
+    mapFoot: "从一个视角走进一段经历，再沿着连接继续探索。",
+    lowerLeft: "Science-minded. Customer-led.",
+    lowerPath: "完整成长路径",
+    lowerCases: "精选案例"
+  }
+};
+
+let currentLanguage = localStorage.getItem("sunny-language") || "en";
+
+function setText(selector, value) {
+  const el = document.querySelector(selector);
+  if (el) el.textContent = value;
+}
+
+function setHTML(selector, value) {
+  const el = document.querySelector(selector);
+  if (el) el.innerHTML = value;
+}
+
+function translateNode(selector, small, title, sub) {
+  const node = document.querySelector(selector);
+  if (!node) return;
+
+  const smallEl = node.querySelector("small");
+  const strongEl = node.querySelector("strong");
+  const spanEl = node.querySelector("span");
+
+  if (smallEl && small !== undefined) smallEl.textContent = small;
+  if (strongEl && title !== undefined) strongEl.textContent = title;
+  if (spanEl && sub !== undefined) spanEl.textContent = sub;
+}
+
+function translateLeaf(selector, name, description) {
+  const leaf = document.querySelector(selector);
+  if (!leaf) return;
+
+  const strong = leaf.querySelector("strong");
+  const span = leaf.querySelector("span");
+
+  if (strong && name !== null) strong.textContent = name;
+  if (span) span.textContent = description;
+}
+
+function setLanguage(lang) {
+  if (!homeTranslations[lang]) lang = "en";
+
+  currentLanguage = lang;
+  localStorage.setItem("sunny-language", lang);
+
+  document.documentElement.lang =
+    lang === "en"
+      ? "en"
+      : lang === "zh-HK"
+      ? "zh-Hant-HK"
+      : "zh-Hans-CN";
+
+  const t = homeTranslations[lang];
+
+  /* Navigation */
+  setText('[data-i18n="navPath"]', t.navPath);
+  setText('[data-i18n="navResume"]', t.navResume);
+  setText('[data-i18n="navContact"]', t.navContact);
+
+  /* Top line */
+  const topSpans = document.querySelectorAll(".net-top span");
+  if (topSpans[1]) topSpans[1].textContent = t.topRight;
+
+  /* Hero */
+  setText(".hub .eyebrow", t.heroEyebrow);
+  setHTML(".hub h1", t.heroTitle);
+  setText(".hub p", t.heroText);
+
+  const heroButtons = document.querySelectorAll(".hub .buttons > *");
+  if (heroButtons[0]) heroButtons[0].textContent = t.heroResume;
+  if (heroButtons[1]) heroButtons[1].textContent = t.heroTalk;
+
+  /* Main nodes */
+  translateNode(".n-ai", t.aiSmall, t.aiTitle, t.aiSub);
+  translateNode(".n-sales", t.salesSmall, t.salesTitle, t.salesSub);
+  translateNode(".n-science", t.scienceSmall, t.scienceTitle, t.scienceSub);
+  translateNode(".n-finance", t.financeSmall, t.financeTitle, t.financeSub);
+  translateNode(".n-about", t.aboutSmall, t.aboutTitle, t.aboutSub);
+  translateNode(".n-life", t.lifeSmall, t.lifeTitle, t.lifeSub);
+
+  /* Experience leaves */
+  translateLeaf(".l-byte", "ByteDance", t.byte);
+  translateLeaf(".l-baidu", "Baidu", t.baidu);
+  translateLeaf(".l-tencent", "Tencent Ads", t.tencent);
+  translateLeaf(".l-join", "JoinQuant", t.join);
+  translateLeaf(".l-tools", "AI × Sales", t.tools);
+  translateLeaf(".l-venture", t.ventureName, t.venture);
+  translateLeaf(".l-milk", t.milkName, t.milk);
+  translateLeaf(".l-siemens", "Siemens", t.siemens);
+  translateLeaf(".l-ey", "EY ESG", t.ey);
+
+  /* Bottom navigation */
+  setText(".map-foot", t.mapFoot);
+
+  const lower = document.querySelector(".lower");
+  if (lower) {
+    const leftText = lower.querySelector(":scope > span");
+    if (leftText) leftText.textContent = t.lowerLeft;
+
+    const lowerButtons = lower.querySelectorAll("button");
+    if (lowerButtons[0]) lowerButtons[0].textContent = t.lowerPath;
+    if (lowerButtons[1]) lowerButtons[1].textContent = t.lowerCases;
+  }
+
+  /* Active language state */
+  document.querySelectorAll("[data-lang]").forEach(button => {
+    button.classList.toggle("active", button.dataset.lang === lang);
+    button.setAttribute(
+      "aria-pressed",
+      button.dataset.lang === lang ? "true" : "false"
+    );
+  });
+
+  /* Redraw the constellation after text length changes */
+  requestAnimationFrame(() => {
+    try {
+      drawNetwork();
+    } catch (e) {}
+  });
+}
+
+/* Language button events */
+document.querySelectorAll("[data-lang]").forEach(button => {
+  button.addEventListener("click", event => {
+    event.preventDefault();
+    event.stopPropagation();
+    setLanguage(button.dataset.lang);
+  });
+});
+
+/* Load saved language; default = English */
+setLanguage(currentLanguage);
 </script>
 </body>
 </html>
