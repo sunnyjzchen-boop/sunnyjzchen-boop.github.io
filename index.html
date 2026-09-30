@@ -121,7 +121,7 @@ body{background:radial-gradient(ellipse at 50% 48%,#fffdfd 0%,#fff1f7 48%,#f8d7e
 <main id="top">
 <div class="network"><div class="net-top"><span>JIAZHEN (SUNNY) CHEN · HONG KONG</span><span>不同经历，相互连接。</span></div><div class="map" aria-label="探索 Sunny 的经历网络">
 <svg class="wires" aria-hidden="true"></svg>
-<div class="hub"><div class="eyebrow">HELLO, I'M SUNNY.</div><h1>I turn customer needs<br><em>into solutions.</em></h1><p>在技术、产品与客户之间，找到新的可能。</p></button><a class="button alt" href="mailto:sunnyjzchen@gmail.com">Let's talk ↗</a></div></div>
+<div class="hub"><div class="eyebrow">HELLO, I'M SUNNY.</div><h1>I turn customer needs<br><em>into solutions.</em></h1><p>在技术、产品与客户之间，找到新的可能。</p><div class="buttons"><a class="button alt" href="mailto:sunnyjzchen@gmail.com">Let's talk ↗</a></div></div>
 <button class="node n-ai" data-open="ai"><small>AI & PRODUCT</small><strong>把需求变成产品</strong><span>ByteDance · Baidu　＋</span></button>
 <button class="node n-sales" data-open="sales"><small>SALES & CUSTOMERS</small><strong>走进客户的生意</strong><span>Tencent Ads　＋</span></button>
 <button class="node n-science" data-open="science"><small>SCIENCE & VENTURES</small><strong>让技术走向市场</strong><span>科研 · 创业 · 产品创新　＋</span></button>
@@ -805,9 +805,8 @@ function setLanguage(lang) {
   setHTML(".hub h1", t.heroTitle);
   setText(".hub p", t.heroText);
 
-  const heroButtons = document.querySelectorAll(".hub .buttons > *");
-  if (heroButtons[0]) heroButtons[0].textContent = t.heroResume;
-  if (heroButtons[1]) heroButtons[1].textContent = t.heroTalk;
+const heroTalkButton = document.querySelector(".hub .buttons .button.alt");
+if (heroTalkButton) heroTalkButton.textContent = t.heroTalk;
 
   /* Main nodes */
   translateNode(".n-ai", t.aiSmall, t.aiTitle, t.aiSub);
