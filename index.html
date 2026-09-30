@@ -164,18 +164,389 @@ body{background:radial-gradient(ellipse at 50% 48%,#fffdfd 0%,#fff1f7 48%,#f8d7e
 
 <dialog id="panel" aria-labelledby="panel-title"><div class="sheet-head"><span>SUNNY / CONNECTIONS</span><button class="close" aria-label="关闭详情">×</button></div><div class="sheet-body" id="panel-content"></div></dialog>
 <script>
-const stories={
-ai:{tag:'AI & PRODUCT',title:'把需求变成产品',intro:'销售经历让我带着一线问题走进产品团队；产品经历又让我更理解，一项能力怎样才能真正交付给客户。',body:`<div class="story"><h3>ByteDance · 商业产品运营</h3><p>参与 AI Shopping Agent 从研究、客户访谈到测试的建设过程，同时负责商家中心的调研、产品手册、GTM 内容与反馈机制。</p><p><b>我学到的：</b>从中后台产品视角理解商业运行，把客户的一句话需求拆成具体场景、产品能力和验证方式。在这里，我积累了 AI 与 SaaS 产品开发流程的实践经验。</p></div><div class="story"><h3>Baidu · 千帆大模型平台</h3><p>通过模型市场研究、开发者活动与用户反馈，理解模型能力、模型售卖，以及技术在实际业务中的应用。</p><p><b>我学到的：</b>向客户解释技术时，要说明它能解决什么问题、在什么条件下有价值。</p></div>`,links:[['sales','前一段连接：销售经验如何帮助我做产品'],['finance','后一段连接：用 AI 与产品经验支持销售']]},
-sales:{tag:'SALES & CUSTOMERS',title:'走进客户的生意',intro:'在腾讯，销售与运营放在一起，让我能从客户的经营目标，一直看到广告投放和产品反馈。',body:`<div class="story"><h3>Tencent Ads · 营销管理培训生</h3><p>服务餐饮品牌及广告代理商，参与投前方案、投中调整和投后复盘，理解不同规模、不同发展阶段广告主的经营需求。</p><p>在达美乐新品推广中，分析历史投放和行业案例，提出品牌与竞价广告组合方案，推动转化归因接入，单次活动预算提升 20%。</p><p><b>我学到的：</b>方案需要贴合客户的生意，也需要帮助对接人在内部讲清楚选择它的理由。互联网广告的价值，最终要回到门店与消费者的实际行为。</p></div>`,links:[['ai','这段经验如何影响我的产品判断']]},
-finance:{tag:'FINANCE & TRUST',title:'用理解建立信任',intro:'金融销售让我把目光从产品本身，扩展到市场变化、风险收益和渠道合作。',body:`<div class="story"><h3>JoinQuant · 市场渠道商务拓展</h3><p>对接银行、券商等机构渠道，跟进产品准入、上架与路演安排，并通过市场和产品业绩分析支持渠道沟通。</p><p>我也把 AI 产品经验带进了销售工作：利用 AI 辅助编程制作同行产品表现看板，帮助自己在市场波动时更快理解情况、组织回应。</p><p><b>我学到的：</b>建立信任需要持续、清楚且有依据的沟通。这段经历增长了我的金融市场理解、资产配置相关销售分析能力，以及机构渠道对接和路演协调能力。</p></div>`,links:[['ai','这项工具能力从哪里来']]},
-science:{tag:'SCIENCE & VENTURES',title:'让技术走向市场',intro:'化学训练让我习惯理解原理。创业和销售让我进一步追问：谁需要它，为什么需要，又会怎样使用它？',body:`<div class="story"><h3>氧清山 · 创业</h3><p>围绕果蔬保鲜产品，走访农场、物流企业与农业机构，理解腐损、运输和采购需求，把技术能力转化为客户关心的经营价值。</p></div><div class="story"><h3>蒙牛 · 自热奶创新项目</h3><p>针对冬季外出场景，用化学知识设计内部加热芯，再将其转化为“暖手暖胃”的产品表达，并策划校园快闪与乡村捐助活动。项目进入全国前十。</p></div><div class="story"><h3>Siemens · 工业销售支持</h3><p>通过 CRM 线索整理和展会支持，认识工业客户与采购流程，也确定了自己走向销售营销的方向。</p></div><div class="story"><h3>EY · ESG 创新挑战赛</h3><p>将用户问题、AI 应用与商业可行性结合，参与方案设计和路演，获得天津赛区一等奖。</p></div><p><b>我学到的：</b>把技术语言转化为市场语言，从理解原理走向理解应用和购买决策。</p>`,links:[['path','展开完整经历']]},
-about:{tag:'ABOUT SUNNY',title:'多种视角，一个方向。',intro:'我是陈佳桢，Sunny。在香港大学学习市场营销，本科在南开大学学习化学。我希望在 Sales 与 Business Development 中，连接技术、产品和客户。',body:`<p>这些经历给了我不同的位置去理解一门生意：销售让我看见客户，产品让我理解交付，科研让我追问原理，创业让我面对市场。</p><p>我希望把这些视角带到下一份工作中，把复杂产品讲清楚，把客户需求转化成可以推进的方案。</p>`,links:[['path','看我的成长路径'],['life','认识工作之外的我'],['cv','查看简历']]},
-life:{tag:'BEYOND WORK',title:'工作之外的我',intro:'跳舞、唱歌，也是我的生活里很重要的一部分。',body:`<div class="life-card"><strong>In motion.</strong><h3>跳舞</h3><p>我曾担任街舞社社长和 Jazz 舞蹈教练，组织社团活动，也参与大型校园活动。这里会慢慢收集我的舞蹈片段与舞台记忆。</p></div><div class="life-card"><strong>In my own voice.</strong><h3>唱歌</h3><p>我也喜欢唱歌。等选好想分享的作品，再把声音放在这里。</p></div>`,links:[['about','回到关于我']]},
-cv:{tag:'RESUMES',title:'找到与你相关的经历',intro:'围绕不同业务场景整理的四份英文简历。',body:`<a class="download" href="Chen_Jiazhen_Advertising_Sales.pdf" target="_blank" rel="noopener">广告销售与客户管理 ↗<small>Advertising Sales · Account Management · PDF</small></a><a class="download" href="Chen_Jiazhen_AI_Technology_Sales.pdf" target="_blank" rel="noopener">AI 与科技企业销售 ↗<small>AI · SaaS · Technology Sales · PDF</small></a><a class="download" href="Chen_Jiazhen_Industrial_Chemical_Sales.pdf" target="_blank" rel="noopener">工业、化学与新能源销售 ↗<small>Industrial · Chemical · New Energy · PDF</small></a><a class="download" href="Chen_Jiazhen_Financial_Institutional_Sales.pdf" target="_blank" rel="noopener">金融机构销售与渠道商务 ↗<small>Institutional Sales · Channel Development · PDF</small></a><p><a href="mailto:sunnyjzchen@gmail.com">sunnyjzchen@gmail.com ↗</a></p>`,links:[]}
+const storiesByLanguage = {
+
+  /* =========================
+     ENGLISH
+     ========================= */
+  en: {
+    ai: {
+      tag: 'AI & PRODUCT',
+      title: 'Turn needs into products',
+      intro: 'My sales experience taught me to bring frontline customer questions into product teams. Product experience, in turn, helped me understand what it takes to turn a capability into something customers can actually use.',
+      body: `
+        <div class="story">
+          <h3>ByteDance · Commercial Product Operations</h3>
+          <p>I contributed to an AI Shopping Agent from research and client interviews through pilot testing, while also supporting merchant-platform research, product materials, GTM content, and feedback loops.</p>
+          <p><b>What I learned:</b> I learned to break a customer request into a specific scenario, product capability, and testable hypothesis. The experience also gave me hands-on exposure to AI and SaaS product development.</p>
+        </div>
+        <div class="story">
+          <h3>Baidu · Qianfan LLM Platform</h3>
+          <p>Through model-market research, developer programs, and user feedback, I learned how model capabilities are packaged, commercialized, and applied to real business scenarios.</p>
+          <p><b>What I learned:</b> Explaining technology to customers means showing what problem it solves, where it fits, and under what conditions it creates value.</p>
+        </div>`,
+      links: [
+        ['sales', 'How sales experience shaped my product thinking'],
+        ['finance', 'How I brought AI and product experience into sales']
+      ]
+    },
+
+    sales: {
+      tag: 'SALES & CUSTOMERS',
+      title: "Understand the client's business",
+      intro: "At Tencent, working across sales and operations helped me connect a client's business objectives with campaign execution and product feedback.",
+      body: `
+        <div class="story">
+          <h3>Tencent Ads · Marketing Management Trainee</h3>
+          <p>I worked with restaurant brands and advertising agencies across pre-campaign planning, in-flight optimization, and post-campaign reviews, learning how advertisers at different stages make commercial decisions.</p>
+          <p>For a Domino's product launch, I analyzed historical campaign performance and category cases, proposed a combined brand and performance advertising approach, and supported conversion attribution. The campaign budget increased by 20%.</p>
+          <p><b>What I learned:</b> A solution needs to fit the client's business and help the person I work with explain internally why it is worth choosing. Ultimately, advertising value has to connect back to real consumer and store behavior.</p>
+        </div>`,
+      links: [
+        ['ai', 'How this experience shaped my product judgment']
+      ]
+    },
+
+    finance: {
+      tag: 'FINANCE & TRUST',
+      title: 'Build trust through understanding',
+      intro: 'Institutional sales expanded my perspective from the product itself to market conditions, risk and return, and channel partnerships.',
+      body: `
+        <div class="story">
+          <h3>JoinQuant · Institutional Sales & Business Development</h3>
+          <p>I supported relationships with banks, securities firms, and other institutional channels, including product admission, listing, roadshow coordination, and performance analysis for client communication.</p>
+          <p>I also brought my AI product experience into sales by using AI-assisted coding to build peer-product performance dashboards, helping me understand market movements and organize responses more efficiently.</p>
+          <p><b>What I learned:</b> Trust is built through communication that is consistent, clear, and evidence-based. This experience strengthened my understanding of institutional channels, sales analysis, and roadshow coordination.</p>
+        </div>`,
+      links: [
+        ['ai', 'Where this product and AI capability came from']
+      ]
+    },
+
+    science: {
+      tag: 'SCIENCE & VENTURES',
+      title: 'Bring technology to market',
+      intro: 'Chemistry trained me to understand how things work. Entrepreneurship and sales taught me to ask another set of questions: who needs it, why do they need it, and how will they use it?',
+      body: `
+        <div class="story">
+          <h3>Oxygen Qingshan · Entrepreneurship</h3>
+          <p>For a produce-preservation product, I visited farms, logistics companies, and agricultural organizations to understand spoilage, transportation, and procurement needs, translating technical capability into business value.</p>
+        </div>
+        <div class="story">
+          <h3>Mengniu · Self-heating Milk Innovation</h3>
+          <p>For winter outdoor consumption, I used chemistry knowledge to design an internal heating core and translated the mechanism into a “warm hands, warm stomach” consumer proposition. The project reached the national top ten.</p>
+        </div>
+        <div class="story">
+          <h3>Siemens · Industrial Sales Support</h3>
+          <p>Through CRM lead organization and exhibition support, I gained early exposure to industrial customers and buying processes and became more certain that I wanted to move toward sales and marketing.</p>
+        </div>
+        <div class="story">
+          <h3>EY · ESG Innovation Challenge</h3>
+          <p>I connected user problems, AI applications, and commercial feasibility in solution design and pitching. The team won First Prize in the Tianjin regional round.</p>
+        </div>
+        <p><b>What I learned:</b> How to translate technical language into market language — moving from understanding how something works to understanding how it is used and purchased.</p>`,
+      links: [
+        ['path', 'Explore my full growing path']
+      ]
+    },
+
+    about: {
+      tag: 'ABOUT SUNNY',
+      title: 'Different perspectives. One direction.',
+      intro: "I'm Jiazhen (Sunny) Chen, an MSc Marketing student at HKU with a chemistry background from Nankai University. I'm building toward Sales and Business Development roles that connect technology, products, and customers.",
+      body: `
+        <p>My experiences have given me different perspectives on how a business works: sales showed me the customer, product taught me about delivery, science trained me to understand underlying mechanisms, and entrepreneurship brought me closer to the market.</p>
+        <p>I want to bring these perspectives into my next role — making complex products easier to understand and turning customer needs into solutions that teams can act on.</p>`,
+      links: [
+        ['path', 'See my growing path'],
+        ['life', 'Meet me beyond work'],
+        ['cv', 'View my resume']
+      ]
+    },
+
+    life: {
+      tag: 'BEYOND WORK',
+      title: 'Beyond work',
+      intro: 'Dance and music are also an important part of who I am.',
+      body: `
+        <div class="life-card">
+          <strong>In motion.</strong>
+          <h3>Dance</h3>
+          <p>I served as President of a street dance club and as a Jazz dance instructor, organizing club activities and participating in large campus events.</p>
+        </div>
+        <div class="life-card">
+          <strong>In my own voice.</strong>
+          <h3>Music</h3>
+          <p>I also enjoy singing. This space will gradually collect some of the moments and work I want to share.</p>
+        </div>`,
+      links: [
+        ['about', 'Back to About']
+      ]
+    },
+
+    cv: {
+      tag: 'RESUMES',
+      title: 'Find the experience most relevant to you',
+      intro: 'Four English resumes tailored to different business contexts.',
+      body: `
+        <a class="download" href="Chen_Jiazhen_Advertising_Sales.pdf" target="_blank" rel="noopener">Advertising Sales & Account Management ↗<small>Advertising Sales · Account Management · PDF</small></a>
+        <a class="download" href="Chen_Jiazhen_AI_Technology_Sales.pdf" target="_blank" rel="noopener">AI & Technology Sales ↗<small>AI · SaaS · Technology Sales · PDF</small></a>
+        <a class="download" href="Chen_Jiazhen_Industrial_Chemical_Sales.pdf" target="_blank" rel="noopener">Industrial, Chemical & New Energy Sales ↗<small>Industrial · Chemical · New Energy · PDF</small></a>
+        <a class="download" href="Chen_Jiazhen_Financial_Institutional_Sales.pdf" target="_blank" rel="noopener">Institutional Sales & Channel Development ↗<small>Institutional Sales · Channel Development · PDF</small></a>
+        <p><a href="mailto:sunnyjzchen@gmail.com">sunnyjzchen@gmail.com ↗</a></p>`,
+      links: []
+    }
+  },
+
+  /* =========================
+     繁體中文
+     ========================= */
+  "zh-HK": {
+    ai: {
+      tag: 'AI & PRODUCT',
+      title: '把需求變成產品',
+      intro: '銷售經歷讓我帶著一線客戶問題走進產品團隊；產品經歷亦讓我更理解，一項能力如何真正轉化為客戶可以使用的產品。',
+      body: `
+        <div class="story">
+          <h3>ByteDance · 商業產品營運</h3>
+          <p>參與 AI Shopping Agent 從研究、客戶訪談到測試的建設過程，同時負責商家平台調研、產品資料、GTM 內容與反饋機制。</p>
+          <p><b>我學到的：</b>把客戶需求拆解為具體場景、產品能力與驗證方式，並從中後台產品視角理解商業運作。</p>
+        </div>
+        <div class="story">
+          <h3>Baidu · 千帆大模型平台</h3>
+          <p>透過模型市場研究、開發者活動與用戶反饋，理解模型能力、商業化方式，以及技術在實際業務中的應用。</p>
+          <p><b>我學到的：</b>向客戶解釋技術，不只是介紹功能，而是說清楚它能解決甚麼問題、在哪些場景下有價值。</p>
+        </div>`,
+      links: [
+        ['sales', '銷售經驗如何影響我的產品判斷'],
+        ['finance', '如何把 AI 與產品經驗帶進銷售']
+      ]
+    },
+
+    sales: {
+      tag: 'SALES & CUSTOMERS',
+      title: '走進客戶的業務',
+      intro: '在騰訊，銷售與營運的結合，讓我能從客戶的經營目標，一路看到廣告投放與產品反饋。',
+      body: `
+        <div class="story">
+          <h3>Tencent Ads · 營銷管理培訓生</h3>
+          <p>服務餐飲品牌及廣告代理商，參與投前方案、投中優化及投後復盤，理解不同規模及發展階段廣告主的經營需要。</p>
+          <p>在達美樂新品推廣中，我分析歷史投放及行業案例，提出品牌與效果廣告組合方案，並推動轉化歸因接入，單次活動預算提升 20%。</p>
+          <p><b>我學到的：</b>方案既要切合客戶的業務，也要幫助對接人在內部說清楚選擇它的理由。廣告價值最終仍要回到消費者與門店的實際行為。</p>
+        </div>`,
+      links: [
+        ['ai', '這段經驗如何影響我的產品判斷']
+      ]
+    },
+
+    finance: {
+      tag: 'FINANCE & TRUST',
+      title: '以理解建立信任',
+      intro: '機構銷售讓我把視角從產品本身，延伸至市場變化、風險收益與渠道合作。',
+      body: `
+        <div class="story">
+          <h3>JoinQuant · 機構銷售與商務拓展</h3>
+          <p>對接銀行、券商等機構渠道，跟進產品准入、上架與路演安排，並透過市場及產品業績分析支持渠道溝通。</p>
+          <p>我亦把 AI 產品經驗帶進銷售工作，利用 AI 輔助編程製作同類產品表現看板，幫助自己更快理解市場變化並組織回應。</p>
+          <p><b>我學到的：</b>建立信任需要持續、清晰且有依據的溝通。這段經歷加深了我對機構渠道、銷售分析及路演協調的理解。</p>
+        </div>`,
+      links: [
+        ['ai', '這項 AI 與產品能力從哪裡來']
+      ]
+    },
+
+    science: {
+      tag: 'SCIENCE & VENTURES',
+      title: '讓技術走向市場',
+      intro: '化學訓練讓我習慣理解原理；創業與銷售則讓我進一步追問：誰需要它、為甚麼需要，以及會如何使用它？',
+      body: `
+        <div class="story">
+          <h3>氧清山 · 創業</h3>
+          <p>圍繞果蔬保鮮產品，走訪農場、物流企業與農業機構，理解腐損、運輸及採購需要，把技術能力轉化為客戶關心的經營價值。</p>
+        </div>
+        <div class="story">
+          <h3>蒙牛 · 自熱奶創新項目</h3>
+          <p>針對冬季外出場景，以化學知識設計內部加熱芯，再把技術機制轉化為「暖手暖胃」的產品表達。項目進入全國前十。</p>
+        </div>
+        <div class="story">
+          <h3>Siemens · 工業銷售支持</h3>
+          <p>透過 CRM 線索整理與展會支持，開始理解工業客戶與採購流程，亦更確定自己希望走向銷售與市場。</p>
+        </div>
+        <div class="story">
+          <h3>EY · ESG 創新挑戰賽</h3>
+          <p>把用戶問題、AI 應用與商業可行性結合，參與方案設計及路演，團隊獲得天津賽區一等獎。</p>
+        </div>
+        <p><b>我學到的：</b>把技術語言轉化為市場語言，從理解原理進一步走向理解應用與購買決策。</p>`,
+      links: [
+        ['path', '查看完整成長路徑']
+      ]
+    },
+
+    about: {
+      tag: 'ABOUT SUNNY',
+      title: '不同視角，一個方向。',
+      intro: '我是陳佳楨，Sunny。現於香港大學修讀市場營銷碩士，本科就讀南開大學化學。我希望在 Sales 與 Business Development 中連結技術、產品與客戶。',
+      body: `
+        <p>這些經歷讓我從不同位置理解一門生意：銷售讓我看見客戶，產品讓我理解交付，科研讓我追問原理，創業則讓我直接面對市場。</p>
+        <p>我希望把這些視角帶到下一份工作，把複雜產品說清楚，把客戶需求轉化為能夠推進的方案。</p>`,
+      links: [
+        ['path', '查看我的成長路徑'],
+        ['life', '認識工作以外的我'],
+        ['cv', '查看履歷']
+      ]
+    },
+
+    life: {
+      tag: 'BEYOND WORK',
+      title: '工作以外的我',
+      intro: '跳舞與唱歌，也是我生活中很重要的一部分。',
+      body: `
+        <div class="life-card"><strong>In motion.</strong><h3>跳舞</h3><p>我曾擔任街舞社社長及 Jazz 舞蹈教練，組織社團活動，亦參與大型校園活動。</p></div>
+        <div class="life-card"><strong>In my own voice.</strong><h3>唱歌</h3><p>我亦喜歡唱歌。這個空間會慢慢收集一些我想分享的作品與片段。</p></div>`,
+      links: [['about', '回到關於我']]
+    },
+
+    cv: {
+      tag: 'RESUMES',
+      title: '找到與你最相關的經歷',
+      intro: '按不同業務場景整理的四份英文履歷。',
+      body: `
+        <a class="download" href="Chen_Jiazhen_Advertising_Sales.pdf" target="_blank" rel="noopener">廣告銷售與客戶管理 ↗<small>Advertising Sales · Account Management · PDF</small></a>
+        <a class="download" href="Chen_Jiazhen_AI_Technology_Sales.pdf" target="_blank" rel="noopener">AI 與科技企業銷售 ↗<small>AI · SaaS · Technology Sales · PDF</small></a>
+        <a class="download" href="Chen_Jiazhen_Industrial_Chemical_Sales.pdf" target="_blank" rel="noopener">工業、化學與新能源銷售 ↗<small>Industrial · Chemical · New Energy · PDF</small></a>
+        <a class="download" href="Chen_Jiazhen_Financial_Institutional_Sales.pdf" target="_blank" rel="noopener">機構銷售與渠道商務 ↗<small>Institutional Sales · Channel Development · PDF</small></a>
+        <p><a href="mailto:sunnyjzchen@gmail.com">sunnyjzchen@gmail.com ↗</a></p>`,
+      links: []
+    }
+  },
+
+  /* =========================
+     简体中文
+     ========================= */
+  "zh-CN": {
+    ai: {
+      tag: 'AI & PRODUCT',
+      title: '把需求变成产品',
+      intro: '销售经历让我带着一线问题走进产品团队；产品经历又让我更理解，一项能力怎样才能真正交付给客户。',
+      body: `
+        <div class="story"><h3>ByteDance · 商业产品运营</h3><p>参与 AI Shopping Agent 从研究、客户访谈到测试的建设过程，同时负责商家中心调研、产品手册、GTM 内容与反馈机制。</p><p><b>我学到的：</b>把客户需求拆成具体场景、产品能力和验证方式，并从中后台产品视角理解商业运行。</p></div>
+        <div class="story"><h3>Baidu · 千帆大模型平台</h3><p>通过模型市场研究、开发者活动与用户反馈，理解模型能力、商业化方式，以及技术在实际业务中的应用。</p><p><b>我学到的：</b>向客户解释技术，需要说清楚它能解决什么问题、在什么场景下有价值。</p></div>`,
+      links: [['sales','销售经验如何影响我的产品判断'],['finance','如何把 AI 与产品经验带进销售']]
+    },
+
+    sales: {
+      tag: 'SALES & CUSTOMERS',
+      title: '走进客户的生意',
+      intro: '在腾讯，销售与运营放在一起，让我能从客户的经营目标，一直看到广告投放和产品反馈。',
+      body: `<div class="story"><h3>Tencent Ads · 营销管理培训生</h3><p>服务餐饮品牌及广告代理商，参与投前方案、投中调整和投后复盘，理解不同规模、不同发展阶段广告主的经营需求。</p><p>在达美乐新品推广中，分析历史投放和行业案例，提出品牌与竞价广告组合方案，推动转化归因接入，单次活动预算提升 20%。</p><p><b>我学到的：</b>方案需要贴合客户的生意，也需要帮助对接人在内部讲清楚选择它的理由。互联网广告的价值，最终要回到门店与消费者的实际行为。</p></div>`,
+      links: [['ai','这段经验如何影响我的产品判断']]
+    },
+
+    finance: {
+      tag: 'FINANCE & TRUST',
+      title: '用理解建立信任',
+      intro: '机构销售让我把目光从产品本身，扩展到市场变化、风险收益和渠道合作。',
+      body: `<div class="story"><h3>JoinQuant · 机构销售与商务拓展</h3><p>对接银行、券商等机构渠道，跟进产品准入、上架与路演安排，并通过市场和产品业绩分析支持渠道沟通。</p><p>我也把 AI 产品经验带进销售工作，利用 AI 辅助编程制作同行产品表现看板，帮助自己更快理解市场变化、组织回应。</p><p><b>我学到的：</b>建立信任需要持续、清楚且有依据的沟通。这段经历增长了我对机构渠道、销售分析和路演协调的理解。</p></div>`,
+      links: [['ai','这项 AI 与产品能力从哪里来']]
+    },
+
+    science: {
+      tag: 'SCIENCE & VENTURES',
+      title: '让技术走向市场',
+      intro: '化学训练让我习惯理解原理。创业和销售让我进一步追问：谁需要它，为什么需要，又会怎样使用它？',
+      body: `<div class="story"><h3>氧清山 · 创业</h3><p>围绕果蔬保鲜产品，走访农场、物流企业与农业机构，理解腐损、运输和采购需求，把技术能力转化为客户关心的经营价值。</p></div><div class="story"><h3>蒙牛 · 自热奶创新项目</h3><p>针对冬季外出场景，用化学知识设计内部加热芯，再将其转化为“暖手暖胃”的产品表达。项目进入全国前十。</p></div><div class="story"><h3>Siemens · 工业销售支持</h3><p>通过 CRM 线索整理和展会支持，认识工业客户与采购流程，也确定了自己走向销售营销的方向。</p></div><div class="story"><h3>EY · ESG 创新挑战赛</h3><p>将用户问题、AI 应用与商业可行性结合，参与方案设计和路演，获得天津赛区一等奖。</p></div><p><b>我学到的：</b>把技术语言转化为市场语言，从理解原理走向理解应用和购买决策。</p>`,
+      links: [['path','展开完整经历']]
+    },
+
+    about: {
+      tag: 'ABOUT SUNNY',
+      title: '多种视角，一个方向。',
+      intro: '我是陈佳桢，Sunny。在香港大学学习市场营销，本科在南开大学学习化学。我希望在 Sales 与 Business Development 中，连接技术、产品和客户。',
+      body: `<p>这些经历给了我不同的位置去理解一门生意：销售让我看见客户，产品让我理解交付，科研让我追问原理，创业让我面对市场。</p><p>我希望把这些视角带到下一份工作中，把复杂产品讲清楚，把客户需求转化成可以推进的方案。</p>`,
+      links: [['path','看我的成长路径'],['life','认识工作之外的我'],['cv','查看简历']]
+    },
+
+    life: {
+      tag: 'BEYOND WORK',
+      title: '工作之外的我',
+      intro: '跳舞、唱歌，也是我的生活里很重要的一部分。',
+      body: `<div class="life-card"><strong>In motion.</strong><h3>跳舞</h3><p>我曾担任街舞社社长和 Jazz 舞蹈教练，组织社团活动，也参与大型校园活动。</p></div><div class="life-card"><strong>In my own voice.</strong><h3>唱歌</h3><p>我也喜欢唱歌。这里会慢慢收集我想分享的作品与片段。</p></div>`,
+      links: [['about','回到关于我']]
+    },
+
+    cv: {
+      tag: 'RESUMES',
+      title: '找到与你相关的经历',
+      intro: '围绕不同业务场景整理的四份英文简历。',
+      body: `<a class="download" href="Chen_Jiazhen_Advertising_Sales.pdf" target="_blank" rel="noopener">广告销售与客户管理 ↗<small>Advertising Sales · Account Management · PDF</small></a><a class="download" href="Chen_Jiazhen_AI_Technology_Sales.pdf" target="_blank" rel="noopener">AI 与科技企业销售 ↗<small>AI · SaaS · Technology Sales · PDF</small></a><a class="download" href="Chen_Jiazhen_Industrial_Chemical_Sales.pdf" target="_blank" rel="noopener">工业、化学与新能源销售 ↗<small>Industrial · Chemical · New Energy · PDF</small></a><a class="download" href="Chen_Jiazhen_Financial_Institutional_Sales.pdf" target="_blank" rel="noopener">金融机构销售与渠道商务 ↗<small>Institutional Sales · Channel Development · PDF</small></a><p><a href="mailto:sunnyjzchen@gmail.com">sunnyjzchen@gmail.com ↗</a></p>`,
+      links: []
+    }
+  }
 };
 const panel=document.getElementById('panel'), content=document.getElementById('panel-content');let lastTrigger;
 function highlight(k){document.querySelectorAll('[data-wire]').forEach(e=>e.classList.toggle('active',e.dataset.wire===k||(['ai','sales','finance'].includes(k)&&e.dataset.wire==='bridge')))}
-function openPanel(k){if(!panel.open)lastTrigger=document.activeElement;highlight(k);if(stories[k]){const d=stories[k];content.innerHTML=`<p class="kicker">${d.tag}</p><h2 id="panel-title">${d.title}</h2><p>${d.intro}</p>${d.body}`+(d.links.length?`<div class="connection"><b>继续探索这条连接</b>${d.links.map(([id,t])=>`<button data-open="${id}">${t} ↗</button>`).join('')}</div>`:'')}else{const src=document.getElementById(k);content.innerHTML='<h2 id="panel-title">'+(k==='path'?'我的成长路径':'精选案例')+'</h2>'+src.innerHTML;content.querySelectorAll('[id]').forEach(e=>{if(e.id!=='panel-title')e.removeAttribute('id')})}if(!panel.open)panel.showModal();panel.scrollTop=0;document.body.style.overflow='hidden';document.querySelector('.close').focus()}
+function openPanel(k){
+  if(!panel.open) lastTrigger=document.activeElement;
+
+  highlight(k);
+
+  const currentStories = storiesByLanguage[currentLanguage] || storiesByLanguage.en;
+
+  if(currentStories[k]){
+    const d=currentStories[k];
+
+    const connectionTitle =
+      currentLanguage === 'en'
+        ? 'Continue exploring'
+        : currentLanguage === 'zh-HK'
+        ? '繼續探索這條連結'
+        : '继续探索这条连接';
+
+    content.innerHTML =
+      `<p class="kicker">${d.tag}</p>
+       <h2 id="panel-title">${d.title}</h2>
+       <p>${d.intro}</p>
+       ${d.body}` +
+      (d.links.length
+        ? `<div class="connection">
+             <b>${connectionTitle}</b>
+             ${d.links.map(([id,t]) =>
+               `<button data-open="${id}">${t} ↗</button>`
+             ).join('')}
+           </div>`
+        : '');
+
+  } else {
+    const src=document.getElementById(k);
+
+    const fallbackTitle =
+      k === 'path'
+        ? (currentLanguage === 'en'
+            ? 'My Growing Path'
+            : currentLanguage === 'zh-HK'
+            ? '我的成長路徑'
+            : '我的成长路径')
+        : (currentLanguage === 'en'
+            ? 'Selected Cases'
+            : currentLanguage === 'zh-HK'
+            ? '精選案例'
+            : '精选案例');
+
+    content.innerHTML =
+      `<h2 id="panel-title">${fallbackTitle}</h2>` +
+      src.innerHTML;
+
+    content.querySelectorAll('[id]').forEach(e=>{
+      if(e.id!=='panel-title') e.removeAttribute('id');
+    });
+  }
+
+  if(!panel.open) panel.showModal();
+
+  panel.scrollTop=0;
+  document.body.style.overflow='hidden';
+  document.querySelector('.close').focus();
+}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(b){openPanel(b.dataset.open);if(b.dataset.topic){const heading=[...content.querySelectorAll('h3')].find(h=>h.textContent.includes(b.dataset.topic));heading?.scrollIntoView({block:'start',behavior:'smooth'})}}});document.querySelector('.close').onclick=()=>panel.close();panel.addEventListener('click',e=>{if(e.target===panel&&e.clientX<panel.getBoundingClientRect().left)panel.close()});panel.addEventListener('close',()=>{document.body.style.overflow='';highlight('');lastTrigger?.focus()});document.querySelectorAll('.node,.leaf').forEach(b=>{b.addEventListener('mouseenter',()=>highlight(b.dataset.open));b.addEventListener('mouseleave',()=>{if(!panel.open)highlight('')});b.addEventListener('focus',()=>highlight(b.dataset.open));b.addEventListener('blur',()=>{if(!panel.open)highlight('')})});
 
 function drawNetwork(){
