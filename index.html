@@ -316,6 +316,89 @@ body{background:radial-gradient(ellipse at 50% 48%,#fffdfd 0%,#fff1f7 48%,#f8d7e
 
 /* Contact cards */
 .contact-options{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0}.contact-option{display:block;padding:22px;border:1px solid #e6bfd0;border-radius:18px;background:#fff;overflow-wrap:anywhere}.contact-option b{display:block;font-size:19px;color:#9b315e;margin-bottom:6px}.contact-option span{font-size:14px;color:#65505d}.contact-option:hover{border-color:#b72d65;background:#fff1f7}.wechat-contact{align-self:start}.wechat-contact summary{cursor:pointer;list-style:none}.wechat-contact summary::-webkit-details-marker{display:none}.wechat-contact summary:after{content:'＋';float:right;color:#9b315e}.wechat-contact[open] summary:after{content:'−'}.wechat-image{display:block;width:100%;max-width:350px;height:auto;margin:18px auto 0;border-radius:12px}.contact-options .wechat-help{text-align:center;font-size:13px;margin:12px 0 0}@media(max-width:520px){.contact-options{grid-template-columns:1fr}.contact-option{padding:18px}}
+/* Clearer hierarchy, with the constellation retained as the single-screen entry. */
+.network{padding-left:30px;padding-right:30px}
+.net-top{font-size:11px}
+.hub{width:37%;top:50%;z-index:3;padding:14px 6px;background:radial-gradient(ellipse,#fff9fcfa 46%,#fff9fc00 76%)}
+.hub h1{font-size:clamp(29px,3.1vw,44px);text-wrap:balance;margin:10px 0 12px}
+.hub > p{max-width:340px;min-height:66px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:14px;line-height:1.6}
+.hub > p.route-caption{color:#8e345b;font-weight:550}
+.hub .buttons{gap:8px;margin-top:14px}
+.hub .button{font:inherit;font-size:13px;min-height:38px;cursor:pointer}
+.hub .quick-button{background:#ac285d;border:1px solid #ac285d;color:#fff}
+.n-about strong{text-wrap:balance}
+.n-about{top:9%;min-height:100px}
+.node strong{line-height:1.25;text-wrap:balance}
+.node{border-radius:20px}
+.leaf strong{color:#5d3b4d;font-weight:650}
+.leaf span{color:#775966}
+.leaf.route-node,.node.route-node{border-color:#b9934e;box-shadow:0 0 0 2px #c9a65b38,0 10px 26px #a4547120;background-color:#fffdf8}
+.map.route-selected .leaf:not(.route-node),.map.route-selected .node:not(.route-node){opacity:.62}
+.leaf,.node{transition:opacity .22s,border-color .22s,box-shadow .22s,transform .22s}
+.wires path{stroke:#d8b7c7;opacity:.42;stroke-width:1}
+.wires path.active{stroke:#c18da5;opacity:.65;stroke-width:1.3}
+.wires path.connection-wire{stroke:#c9ab71;opacity:.36}
+.wires path.route-active{stroke:#b58a3d;opacity:1;stroke-width:2}
+.wires .wire-hit{stroke:transparent!important;stroke-width:18px!important;fill:none;pointer-events:stroke;cursor:pointer;opacity:1}
+.wires .wire-hit:focus-visible{outline:none;stroke:#bb914250!important;stroke-width:8px!important}
+.connection-particle{opacity:.25;transition:opacity .2s}
+.connection-particle.route-active{opacity:1;fill:#ca9b43;filter:drop-shadow(0 0 5px #d8b65b)}
+.route-controls{display:flex;align-items:center;justify-content:center;gap:5px;position:relative;width:max-content;max-width:100%;margin:auto;flex-wrap:wrap}
+.route-chip{border:1px solid #e4c5d3;border-radius:24px;background:#fffafccc;color:#775567;font:inherit;font-size:11px;line-height:1.2;padding:8px 10px;white-space:nowrap;cursor:pointer;min-height:32px}
+.route-chip.route-preview{border-color:#b9914a;background:#fff5dd;color:#704f20;box-shadow:0 2px 8px #b9914a18}
+.route-read{display:block;margin:7px auto -6px;padding:4px 8px;color:#986d24;font:inherit;font-size:12px;background:none;border:0;cursor:pointer}
+.route-read[hidden],.route-reset[hidden]{display:none}
+.route-reset{position:absolute;right:-24px;border:0;background:transparent;font:inherit;font-size:18px;cursor:pointer;color:#8b6475;width:23px;height:30px}
+.n-life{top:88%}
+.sheet-head{padding:14px 30px}
+.sheet-head span{font-size:11px;letter-spacing:.1em}
+.sheet-body{padding:30px 36px 44px}
+.sheet-body > p:not(.kicker){max-width:760px}
+.sheet-body h2{font-size:clamp(27px,3.1vw,39px);letter-spacing:-.035em;line-height:1.2;text-wrap:balance}
+.sheet-body .kicker{font-size:11px;line-height:1.7;letter-spacing:.08em;max-width:90%}
+.project-index{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.project-card{display:flex;flex-direction:column;text-align:left;border:1px solid #e8cfdb;border-radius:17px;background:#fff;padding:21px;color:#382231;cursor:pointer;font:inherit;transition:border-color .2s,transform .2s}
+.project-card:hover{border-color:#b83d71;transform:translateY(-2px)}
+.project-card-top{display:flex;justify-content:space-between;gap:8px;align-items:center;color:#9a5e79;margin-bottom:14px}
+.project-card-top small{font-size:11px;letter-spacing:.08em}
+.project-card > strong{display:block;font-size:18px;line-height:1.4;margin-bottom:9px}
+.project-card > span:not(.project-card-top){display:block;font-size:14px;line-height:1.7;color:#6b5260}
+.project-card .card-action{font-size:12px;margin-top:auto;padding-top:18px;color:#a82b60;font-weight:600}
+.case-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.story-step{padding:22px;border:1px solid #ead5df;border-radius:16px;background:#fff}
+.sheet-body .story-step h3{font-size:13px;font-weight:750;color:#a04068;margin:0 0 10px;letter-spacing:.04em}
+.sheet-body .story-step p{font-size:15px;line-height:1.85;margin:0;color:#584550}
+.story-step.step-2,.story-step.step-3{grid-column:1/-1}
+.story-step.step-3{border-left:4px solid #b9356d;background:#fbe7ef;padding-left:20px}
+.sheet-body .story-step.step-3 h3{color:#8e2452}
+.sheet-body .story-step.step-3 p{color:#602d45;font-size:16px}
+.case-outcome{display:flex;gap:16px;align-items:center;padding:18px 4px 0;color:#7b4a61;font-size:13px}
+.case-outcome strong{color:#91395e}
+.quick-tags{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 32px}
+.quick-tags span{padding:7px 13px;border:1px solid #e6bace;background:#fff1f7;border-radius:30px;color:#91395e;font-size:13px}
+.route-takeaway{padding:20px 23px;margin:24px 0;border-left:3px solid #bc944e;background:#fff5e2;border-radius:0 12px 12px 0;color:#705530;font-size:17px;line-height:1.8}
+.journey-list{margin-top:30px;border-top:1px solid #e8cfdb}
+.journey-item{width:100%;display:grid;grid-template-columns:115px 86px 1fr 20px;gap:14px;align-items:center;text-align:left;background:none;border:0;border-bottom:1px solid #e8cfdb;padding:24px 5px;cursor:pointer;font:inherit;color:#382231}
+.journey-item:hover{background:#fff0f6}
+.journey-date{font-size:12px;color:#a04068;align-self:start;padding-top:4px}
+.journey-brand .logo{width:78px;min-width:0;height:52px;padding:8px}
+.journey-brand .logo img{max-height:32px}
+.journey-brand .fallback{font-size:11px}
+.venture-wordmark{font-size:13px;font-weight:700;color:#417966}
+.journey-content{display:flex;flex-direction:column;gap:5px}
+.journey-content strong{font-size:17px;line-height:1.4}
+.journey-content small{font-size:12px;color:#977286}
+.journey-content > span{font-size:14px;line-height:1.7;color:#66505c}
+.journey-arrow{color:#ad3f6d}
+.nav .links{gap:18px}
+.nav-overview{color:#9d2d5c!important}
+.wechat-contact{height:auto}
+@media(min-width:701px) and (max-height:760px){.hub h1{font-size:31px}.hub > p{min-height:56px;font-size:12px;margin-bottom:5px}.hub .eyebrow{font-size:10px}.hub .buttons{margin-top:9px}.hub .button{min-height:34px;font-size:12px;padding:7px 12px}.route-chip{font-size:10px;padding:7px 8px;min-height:28px}.node small{font-size:9px}.node span{font-size:11px}.n-about{min-height:85px}.node strong{font-size:17px}.leaf strong{font-size:12px}.leaf span{font-size:11px}.hub{top:50%}.net-top{font-size:10px}}
+@media(min-width:701px) and (max-width:1000px){.network{padding:12px 22px 0}.hub{width:41%}.node{width:170px;padding:15px}.node strong{font-size:18px}.node span{font-size:11px}.leaf{width:116px;padding:9px}.leaf strong{font-size:12px}.leaf span{font-size:10px}.l-tools{left:92%}.route-chip{font-size:10px;padding:7px}.hub h1{font-size:30px}.hub > p{font-size:12px}.sheet-body{padding:26px}.project-index{grid-template-columns:1fr}.journey-item{grid-template-columns:85px 65px 1fr 15px;gap:10px}.journey-brand .logo{width:60px}}
+@media(max-width:700px){.network{height:auto;min-height:calc(100svh - 60px);padding:12px 18px}.nav .links{gap:12px;font-size:12px}.nav .navcontact{display:inline-flex!important;padding:6px 10px}.nav .links > button[data-open="path"]{display:none}.nav-overview{display:none}.hub{grid-column:1/-1;grid-row:1;position:static;transform:none;width:100%;padding:24px 3px 26px}.hub h1{font-size:39px}.hub > p{min-height:52px;max-width:320px}.hub .buttons{margin-top:16px}.route-controls{gap:6px}.route-chip{font-size:11px}.n-about{grid-row:2;grid-column:1/-1;min-height:0}.n-about strong{font-size:20px}.n-ai{grid-row:3;grid-column:1/-1}.l-byte{grid-row:4;grid-column:1}.l-baidu{grid-row:4;grid-column:2}.n-sales{grid-row:5;grid-column:1/-1}.l-tencent{grid-row:6;grid-column:1/-1}.n-finance{grid-row:7;grid-column:1/-1}.l-join{grid-row:8;grid-column:1}.l-tools{grid-row:8;grid-column:2}.n-science{grid-row:9;grid-column:1/-1}.l-venture{grid-row:10;grid-column:1}.l-milk{grid-row:10;grid-column:2}.l-siemens{grid-row:11;grid-column:1}.l-ey{grid-row:11;grid-column:2}.n-life{grid-row:12;grid-column:1/-1}.node,.leaf{position:static;transform:none;width:100%;opacity:1!important}.sheet-head{padding:13px 20px}.sheet-body{padding:24px 20px 36px}.sheet-body .kicker{font-size:10px}.sheet-body h2{font-size:29px}.project-index,.case-story-grid{grid-template-columns:1fr}.story-step.step-2,.story-step.step-3{grid-column:auto}.project-card{padding:20px}.journey-item{grid-template-columns:64px 1fr 15px;gap:10px;padding:20px 0}.journey-date{grid-column:1/-1;padding:0}.journey-brand .logo{width:60px;height:47px}.journey-content strong{font-size:16px}.journey-content small{font-size:11px}.lower{font-size:11px;gap:8px}.case-outcome{align-items:flex-start}.sheet-body .story-step p{font-size:15px}.route-takeaway{font-size:16px}}
+@media(max-width:380px){.hub h1{font-size:34px}.route-chip{padding:7px;font-size:10px}.nav .links{gap:8px}.route-reset{right:-19px}.lower{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){.connection-particle{display:none}.project-card:hover{transform:none}*{scroll-behavior:auto!important}}
+
 </style>
 </head>
 <body>
@@ -1703,10 +1786,159 @@ document.querySelectorAll("[data-lang]").forEach(button => {
   });
 });
 
+/* Connected stories: project detail, three-language copy, accessible route controls. */
+const portfolioData = {"projects": {"byte": {"group": "ai", "date": "2025.10–2026.02", "en": ["ByteDance · AI & product operations", "Commercial Product Operations Intern", "Bring a customer-facing perspective into product development.", "An AI shopping agent needed clear use cases and a practical way to test whether it could help customers.", "I drew on my sales experience to ask what information a buyer needs, where a conversation gets stuck, and what a useful response should enable.", "I researched competing products, assessed industry fit, interviewed clients, and developed pilot and evaluation plans with product, engineering, sales, and risk teams. Alongside the Agent, I worked on merchant-platform research, guides, GTM scripts, and feedback processes.", "I learned how commercial systems work from the product side: translating frontline needs into requirements, testing priorities, and delivery decisions. This gave me practical experience with AI and SaaS product development."], "zh-CN": ["字节跳动 · AI 与产品运营", "商业化产品运营实习生", "把一线客户视角带进产品开发。", "AI 导购产品需要找到适合的行业与使用场景，并验证它能否真正帮助客户。", "销售经验让我更关注：消费者缺少什么信息，决策卡在哪里，以及一次回答应当帮助客户推进什么。", "开展竞品与行业研究、客户访谈，参与测试方案与模型评估标准建设，并协调产品、研发、销售和风控团队。同时承担商家平台调研、产品手册、GTM 脚本和反馈机制相关工作。", "从中后台产品视角理解商业运行，学习把一线需求转化为产品要求、测试重点与交付安排，积累 AI 与 SaaS 产品开发经验。"], "zh-HK": ["字節跳動 · AI 與產品營運", "商業化產品營運實習生", "把前線客戶視角帶進產品開發。", "AI 導購產品需要找到合適的行業與使用場景，並驗證它能否真正幫助客戶。", "銷售經驗讓我更關注：消費者缺少甚麼資訊，決策卡在哪裏，以及一次回答應當幫助客戶推進甚麼。", "開展競品與行業研究、客戶訪談，參與測試方案與模型評估標準建設，並協調產品、研發、銷售和風控團隊。同時承擔商家平台調研、產品手冊、GTM 腳本和反饋機制相關工作。", "從中後台產品視角理解商業運作，學習把前線需求轉化為產品要求、測試重點與交付安排，積累 AI 與 SaaS 產品開發經驗。"]}, "tencent": {"group": "sales", "date": "2025.05–2025.09", "en": ["Tencent Ads · Client solutions", "Marketing Management Trainee", "Make a proposal work for the client’s business and decision process.", "For a new product launch, Domino’s already had substantial performance-ad spending. We needed a persuasive case for a broader advertising plan.", "I used historical performance and category examples to connect brand exposure with performance follow-up. I also considered how the contact would explain the proposal internally.", "I reviewed campaigns, developed a combined brand and performance proposal, and supported conversion attribution. I also coordinated an AI + POI feature test with CHAGEE and brought campaign feedback into product discussions.", "Working across sales and operations taught me how advertisers of different sizes and stages make decisions, and how online advertising connects to physical-store business. I became better at turning analysis into a proposal a client can use."], "zh-CN": ["腾讯广告 · 客户解决方案", "广告营销管理培训生", "让方案同时回应客户的生意目标与决策过程。", "达美乐准备推出新品，既有竞价广告投入已经较大，需要为更完整的投放方案建立说服力。", "结合历史投放与行业案例，提出品牌曝光与竞价追投的组合；同时考虑对接人如何向内部解释这笔投入的价值。", "复盘历史 Campaign，制定品牌与竞价联合投放方案，推动转化归因接入；另协调霸王茶姬参与 AI + POI 功能测试，将投放中的问题反馈给产品团队。", "销售与运营一体的工作，让我理解同一行业中不同规模、不同阶段广告主的经营逻辑，连接互联网投放与实体门店生意，并锻炼把分析变成对客方案的能力。"], "zh-HK": ["騰訊廣告 · 客戶解決方案", "廣告營銷管理培訓生", "讓方案同時回應客戶的業務目標與決策過程。", "達美樂準備推出新品，既有競價廣告投入已經較大，需要為更完整的投放方案建立說服力。", "結合歷史投放與行業案例，提出品牌曝光與競價追投的組合；同時考慮對接人如何向內部解釋這筆投入的價值。", "復盤歷史 Campaign，制定品牌與競價聯合投放方案，推動轉化歸因接入；另協調霸王茶姬參與 AI + POI 功能測試，將投放中的問題反饋給產品團隊。", "銷售與營運一體的工作，讓我理解同一行業中不同規模、不同階段廣告主的經營邏輯，連接互聯網投放與實體門店業務，並鍛煉把分析變成對客方案的能力。"], "result": {"en": "Campaign budget increased by 20%.", "zh-CN": "达美乐单次活动预算提升 20%。", "zh-HK": "達美樂單次活動預算提升 20%。"}}, "baidu": {"group": "ai", "date": "2025.01–2025.05", "en": ["Baidu AI Cloud · Qianfan", "Growth Operations Intern", "Understand how model capability becomes a business application.", "A model platform needs to explain its relevance to both developers and enterprise users.", "I studied model offerings through use cases and commercialization, connecting technical differences with the problems a user is trying to solve.", "I researched competing model products, supported AI Day and developer activities, and collected user feedback for product and communication materials.", "I developed a grounding in large language models, how they are sold, and how teams apply them to business tasks. I learned to explain technology through recognizable use cases."], "zh-CN": ["百度智能云 · 千帆大模型平台", "增长运营实习生", "理解模型能力怎样进入真实业务。", "大模型平台需要向开发者与企业用户讲清楚：能力能用在哪里，能够解决什么问题。", "从应用场景与商业化方式研究不同模型，把技术差异与用户的业务需求联系起来。", "开展模型产品竞品研究，参与 AI Day 与开发者活动，收集用户反馈，并支持产品传播和销售材料。", "建立大模型基础知识，理解模型售卖与应用方式，接触模型落地实际业务的前沿实践，学习用业务场景解释技术价值。"], "zh-HK": ["百度智能雲 · 千帆大模型平台", "增長營運實習生", "理解模型能力怎樣進入真實業務。", "大模型平台需要向開發者與企業用戶講清楚：能力能用在哪裏，能夠解決甚麼問題。", "從應用場景與商業化方式研究不同模型，把技術差異與用戶的業務需求聯繫起來。", "開展模型產品競品研究，參與 AI Day 與開發者活動，收集用戶反饋，並支持產品傳播和銷售材料。", "建立大模型基礎知識，理解模型售賣與應用方式，接觸模型落地實際業務的前沿實踐，學習用業務場景解釋技術價值。"]}, "join": {"group": "finance", "date": "2026.04–2026.08", "en": ["JoinQuant · Institutional channels", "Market & Channel Business Development Intern", "Help a channel understand the product and move a partnership forward.", "Institutional distribution involves due diligence, product selection, approvals, and continued communication as markets move.", "I learned to look at both product performance and the channel’s decision process: what needs explaining, which materials are needed, and what the next step is.", "I followed bank and securities channels through admission and listing, independently coordinated a major institutional listing project, arranged roadshow preparation, and analyzed performance for channel updates and investor education.", "I gained practical sales-analysis experience in wealth management and asset allocation, a better understanding of financial markets, and stronger skills in institutional coordination, roadshows, and clear client communication."], "zh-CN": ["聚宽投资 · 机构渠道", "市场渠道商务拓展实习生", "帮助渠道理解产品，推动合作一步步落地。", "机构渠道合作涉及尽调、产品选择、审批上架，以及市场变化中的持续沟通。", "同时理解产品表现与渠道决策流程：客户需要什么解释，当前缺少哪些材料，下一步由谁推动。", "跟进银行、券商渠道准入与上架，独立推进某头部国有金融机构的产品上架项目，协调材料、评审和路演安排；分析产品表现，支持渠道沟通与投教。", "加深对金融市场的理解，积累财富管理与资产配置场景中的销售分析经验，锻炼对接银行券商、协调渠道流程和安排路演营销的能力。"], "zh-HK": ["聚寬投資 · 機構渠道", "市場渠道商務拓展實習生", "幫助渠道理解產品，推動合作一步步落地。", "機構渠道合作涉及盡調、產品選擇、審批上架，以及市場變化中的持續溝通。", "同時理解產品表現與渠道決策流程：客戶需要甚麼解釋，目前缺少哪些材料，下一步由誰推動。", "跟進銀行、券商渠道准入與上架，獨立推進某頭部國有金融機構的產品上架項目，協調材料、評審和路演安排；分析產品表現，支持渠道溝通與投資者教育。", "加深對金融市場的理解，積累財富管理與資產配置場景中的銷售分析經驗，鍛煉對接銀行券商、協調渠道流程和安排路演營銷的能力。"]}, "tools": {"group": "finance", "date": "2026 · JoinQuant", "en": ["AI × Sales · Performance monitoring", "A tool I built during my JoinQuant internship", "Bring product experience back into a sales workflow.", "During market moves, channel conversations benefit from a timely view of comparable products and their performance.", "I wanted to organize peer performance across product lines so that I could understand differences and respond to channel questions more quickly.", "Using AI-assisted coding, I built a dashboard to monitor peer quantitative-fund product performance and used it to support analysis during channel-admission discussions.", "Product experience helped me recognize a recurring sales problem and build a practical tool around it. The goal was to support timely, grounded communication and strengthen cooperation and trust."], "zh-CN": ["AI × Sales · 业绩监测", "聚宽实习中的工具实践", "把产品经验带回销售工作。", "市场涨跌时，渠道需要及时理解同类产品的表现与差异。", "把同行不同产品线的表现整理在一起，辅助理解同处准入流程的其他产品，提升分析与回应的及时性。", "使用 AI 辅助编程搭建其他量化私募各产品线业绩看板，监测同行表现，为渠道准入过程中的分析与沟通提供支持。", "产品经验让我能够发现重复发生的销售问题，并用工具帮助解决；把信息整理得更清楚，也是建立合作信任和安全感的一部分。"], "zh-HK": ["AI × Sales · 業績監測", "聚寬實習中的工具實踐", "把產品經驗帶回銷售工作。", "市場漲跌時，渠道需要及時理解同類產品的表現與差異。", "把同行不同產品線的表現整理在一起，輔助理解同處准入流程的其他產品，提升分析與回應的及時性。", "使用 AI 輔助編程搭建其他量化私募各產品線業績看板，監測同行表現，為渠道准入過程中的分析與溝通提供支持。", "產品經驗讓我能夠發現重複發生的銷售問題，並用工具幫助解決；把資訊整理得更清楚，也是建立合作信任和安全感的一部分。"]}, "venture": {"group": "science", "date": "2022.10–", "en": ["Lüshui Qingshan · Entrepreneurship", "Co-founder · Marketing & Business Development", "Connect preservation technology with the people who would use it.", "A produce-preservation product needed a clear place in farming and logistics workflows.", "I focused on when losses occur, how produce moves, and how buyers make procurement decisions to understand where the technology could be useful.", "I visited farms, logistics businesses, and agricultural organizations across seven provinces and nine locations; developed application and partnership proposals; and worked on market-entry planning, pitches, and external cooperation.", "I learned to connect chemical mechanisms with operating needs and buying decisions, and to build a commercial story from field research."], "zh-CN": ["氯水清山 · 创业", "联合创始人、市场与商务负责人", "让保鲜技术找到真正需要它的人。", "果蔬保鲜技术需要找到适合的应用场景，并进入农场和物流客户的实际工作流程。", "关注损耗发生在哪里、运输链路如何运转、采购由谁决定，据此判断技术的应用价值。", "在 7 省 9 地走访农场、物流企业及农业机构，形成应用与合作方案，规划市场进入路径，并负责路演、商业叙事和外部合作沟通。", "学习把化学原理连接到经营需求与采购决策，从实地调研中建立商业判断，并把技术语言转化为市场语言。"], "zh-HK": ["氯水清山 · 創業", "聯合創始人、市場與商務負責人", "讓保鮮技術找到真正需要它的人。", "果蔬保鮮技術需要找到合適的應用場景，並進入農場和物流客戶的實際工作流程。", "關注損耗發生在哪裏、運輸鏈路如何運作、採購由誰決定，據此判斷技術的應用價值。", "在 7 省 9 地走訪農場、物流企業及農業機構，形成應用與合作方案，規劃市場進入路徑，並負責路演、商業敘事和外部合作溝通。", "學習把化學原理連接到經營需求與採購決策，從實地調研中建立商業判斷，並把技術語言轉化為市場語言。"]}, "milk": {"group": "science", "date": "2024.09–2024.12", "en": ["Mengniu · Self-heating milk", "Product Innovation Project · Product Design & Marketing", "Translate a heating mechanism into “warm hands, warm stomach.”", "Winter outings create a need for milk that is convenient to carry, heat, and enjoy outside.", "I connected the heating function with two recognizable benefits: warmth to hold and a warm drink on the go.", "I used chemistry knowledge to design the internal heating core and structure, translated the mechanism into consumer-facing messaging, and planned campus pop-ups and rural donation campaigns.", "I learned to connect a use case, a technical design, and a marketing idea into one product proposition."], "zh-CN": ["蒙牛 · 自热奶创新", "产品创新项目 · 产品设计与营销策划", "把加热结构转化为“暖手暖胃”的产品体验。", "冬季外出携带奶制品时，加热与便携难以兼顾。", "把加热功能连接到两个直观价值：拿在手里能够取暖，喝下去也是温热的。", "运用化学知识设计内部加热芯和加热结构，将技术原理转化为营销语言，并策划校园快闪、乡村捐助等系列活动。", "学习把使用场景、技术设计和营销创意组织成一致的产品主张，让消费者理解一项技术与自己的关系。"], "zh-HK": ["蒙牛 · 自熱奶創新", "產品創新項目 · 產品設計與營銷策劃", "把加熱結構轉化為「暖手暖胃」的產品體驗。", "冬季外出攜帶奶製品時，加熱與便攜難以兼顧。", "把加熱功能連接到兩個直觀價值：拿在手裏能夠取暖，喝下去也是溫熱的。", "運用化學知識設計內部加熱芯和加熱結構，將技術原理轉化為營銷語言，並策劃校園快閃、鄉村捐助等系列活動。", "學習把使用場景、技術設計和營銷創意組織成一致的產品主張，讓消費者理解一項技術與自己的關係。"], "result": {"en": "National top ten · Team project", "zh-CN": "全国前十 · 团队项目", "zh-HK": "全國前十 · 團隊項目"}}, "siemens": {"group": "science", "date": "2023.06–2023.10", "en": ["Siemens · Industrial sales support", "Industrial Product Sales & Business Development Intern", "My first step toward a career in sales and marketing.", "The sales team needed organized leads and support for exhibition outreach.", "I learned to consider a lead’s industry, needs, and sales stage when organizing information for follow-up.", "I maintained and prioritized CRM leads and supported exhibition planning and sales materials for industrial electrical products.", "I gained an initial understanding of physical supply chains and industrial buying processes, developed event and exhibition skills, and became more certain about pursuing sales and marketing."], "zh-CN": ["西门子 · 工业销售支持", "工业产品销售与商务拓展实习生", "确定走入销售与市场的起点。", "销售团队需要更清楚的线索整理，以及展会获客与物料支持。", "结合客户行业、需求与销售阶段整理信息，让团队更容易识别跟进重点。", "维护 CRM、进行线索优先级排序，并支持工业电气产品相关展会设计、活动准备和销售物料工作。", "开始理解实体供应链与工业采购流程，锻炼活动和展会支持能力，也更明确自己希望走向销售与市场。"], "zh-HK": ["西門子 · 工業銷售支持", "工業產品銷售與商務拓展實習生", "確定走入銷售與市場的起點。", "銷售團隊需要更清楚的線索整理，以及展會獲客與物料支持。", "結合客戶行業、需求與銷售階段整理資訊，讓團隊更容易識別跟進重點。", "維護 CRM、進行線索優先級排序，並支持工業電氣產品相關展會設計、活動準備和銷售物料工作。", "開始理解實體供應鏈與工業採購流程，鍛煉活動和展會支持能力，也更明確自己希望走向銷售與市場。"]}, "ey": {"group": "science", "date": "2024.04–2024.06", "en": ["EY · ESG Innovation Challenge", "University Competition · AI × ESG Solution Design", "Turn a broad issue into a concrete application.", "An ESG challenge needed a clearly defined user problem and a plausible AI application.", "I worked from user needs toward functions and commercial feasibility to make the proposed solution specific.", "I researched industry needs, contributed to the AI solution framework and initial commercialization plan, and supported the final pitch.", "I learned to structure an ambiguous problem, connect technology with a use case, and explain the commercial rationale of a proposal."], "zh-CN": ["安永 · ESG 创新挑战赛", "大学生竞赛 · AI × ESG 解决方案设计", "把宏观议题拆解为具体的应用问题。", "ESG 议题需要明确的用户问题，以及有实际用途的 AI 应用构想。", "从用户需求出发，逐步连接产品功能与商业可行性，让方案足够具体。", "开展行业需求研究，参与 AI 解决方案框架与初步商业化规划，协助项目材料制作和最终路演。", "锻炼拆解开放问题、连接技术与应用场景，以及讲清方案商业价值的能力。"], "zh-HK": ["安永 · ESG 創新挑戰賽", "大學生競賽 · AI × ESG 解決方案設計", "把宏觀議題拆解為具體的應用問題。", "ESG 議題需要明確的用戶問題，以及有實際用途的 AI 應用構想。", "從用戶需求出發，逐步連接產品功能與商業可行性，讓方案足夠具體。", "開展行業需求研究，參與 AI 解決方案框架與初步商業化規劃，協助項目材料製作和最終路演。", "鍛煉拆解開放問題、連接技術與應用場景，以及講清方案商業價值的能力。"], "result": {"en": "First Prize · Tianjin regional round", "zh-CN": "天津赛区一等奖", "zh-HK": "天津賽區一等獎"}}}, "ui": {"en": {"quick": "30-second overview", "about": "Meet Sunny", "aboutSub": "My perspective, at a glance ＋", "labels": ["The challenge", "My judgment", "What I did", "What I learned"], "read": "Explore this experience", "result": "Outcome", "path": "My growing path", "pathIntro": "Recent roles first. Open an experience to explore the judgment, work, and learning behind it.", "cases": "Selected stories", "casesIntro": "Four moments that shaped how I understand customers, products, and markets.", "close": "Close details", "connections": "Follow a connection", "reset": "Reset connection", "explore": "Explore the connection ↗", "quickTitle": "Science-minded. Customer-led.", "quickIntro": "I’m Sunny, an HKU MSc Marketing student with a chemistry background from Nankai University. I’m building a career in Sales and Business Development in Hong Kong.", "quickSummary": "I translate technical language into market language. Experience across frontline sales, product operations, and institutional channels helps me understand a solution from the customer, product, and business perspectives.", "quickProof": "Start with a story", "quickTags": ["Customer needs", "Product understanding", "Commercial execution"], "contact": "Get in touch", "cv": "Request my resume", "ventureDate": "Entrepreneurship · since 2022", "next": "Continue exploring", "kicker": "EXPERIENCE / LEARNING", "routeTag": "CONNECTED EXPERIENCE"}, "zh-CN": {"quick": "30 秒认识我", "about": "从这里认识我", "aboutSub": "我的方向与多维视角 ＋", "labels": ["遇到的问题", "我的判断", "如何推进", "我学到的"], "read": "展开这段经历", "result": "项目结果", "path": "我的成长路径", "pathIntro": "近期经历在前。点击每一段，了解我做过的判断、推进的工作，以及学到的能力。", "cases": "精选故事", "casesIntro": "四段具体经历，展示我怎样理解客户、产品与市场。", "close": "关闭详情", "connections": "沿着连接探索", "reset": "重置连接", "explore": "看看这条连接 ↗", "quickTitle": "理解技术，也理解客户。", "quickIntro": "我是 Sunny，香港大学市场营销硕士在读，本科就读于南开大学应用化学专业，希望在香港发展 Sales 与 Business Development 职业。", "quickSummary": "我希望把技术语言转化为市场语言。一线销售、产品运营与机构渠道的经历，让我能够从客户、产品和生意的不同视角理解一个解决方案。", "quickProof": "从一个故事开始", "quickTags": ["理解客户需求", "理解产品能力", "推动商业落地"], "contact": "联系我", "cv": "向我索取简历", "ventureDate": "创业 · 2022 年起", "next": "继续探索", "kicker": "经历 / 成长", "routeTag": "经历之间的连接"}, "zh-HK": {"quick": "30 秒認識我", "about": "從這裏認識我", "aboutSub": "我的方向與多維視角 ＋", "labels": ["遇到的問題", "我的判斷", "如何推進", "我學到的"], "read": "展開這段經歷", "result": "項目結果", "path": "我的成長路徑", "pathIntro": "近期經歷在前。點擊每一段，了解我做過的判斷、推進的工作，以及學到的能力。", "cases": "精選故事", "casesIntro": "四段具體經歷，展示我怎樣理解客戶、產品與市場。", "close": "關閉詳情", "connections": "沿着連結探索", "reset": "重設連結", "explore": "看看這條連結 ↗", "quickTitle": "理解技術，也理解客戶。", "quickIntro": "我是 Sunny，香港大學市場營銷碩士在讀，本科就讀於南開大學應用化學專業，希望在香港發展 Sales 與 Business Development 職業。", "quickSummary": "我希望把技術語言轉化為市場語言。前線銷售、產品營運與機構渠道的經歷，讓我能夠從客戶、產品和業務的不同視角理解一個解決方案。", "quickProof": "從一個故事開始", "quickTags": ["理解客戶需求", "理解產品能力", "推動商業落地"], "contact": "聯絡我", "cv": "向我索取履歷", "ventureDate": "創業 · 2022 年起", "next": "繼續探索", "kicker": "經歷 / 成長", "routeTag": "經歷之間的連結"}}, "routes": {"sales-product": {"nodes": [".l-tencent", ".n-sales", ".l-byte", ".n-ai"], "projects": ["tencent", "byte"], "en": ["Sales → Product", "Sales experience gave my product work a customer perspective.", "At Tencent, I learned to connect a proposal with a client’s goals and decision process. At ByteDance, I brought those questions into interviews, product requirements, and test design.", "Understanding what a client needs to decide helps me ask better questions about what a product should do."], "zh-CN": ["销售 → 产品", "一线销售经验，让我做产品时更懂客户真正需要什么。", "在腾讯，我学习把方案与客户的经营目标、决策过程联系起来。到字节后，我把这些问题带进客户访谈、产品需求与测试设计。", "理解客户如何做决定，帮助我更准确地判断产品应当解决什么问题。"], "zh-HK": ["銷售 → 產品", "前線銷售經驗，讓我做產品時更懂客戶真正需要甚麼。", "在騰訊，我學習把方案與客戶的經營目標、決策過程聯繫起來。到字節後，我把這些問題帶進客戶訪談、產品需求與測試設計。", "理解客戶如何做決定，幫助我更準確地判斷產品應當解決甚麼問題。"]}, "ai-sales": {"nodes": [".l-byte", ".n-ai", ".l-tools", ".l-join", ".n-finance"], "projects": ["byte", "tools", "join"], "en": ["AI → Sales", "AI product experience helped me build tools for sales.", "Product work taught me to break a need into a workable solution. At JoinQuant, I used AI-assisted coding to build a peer-performance dashboard for analysis and channel communication.", "The experience came full circle: customer needs informed product work, and product skills helped me respond to customers."], "zh-CN": ["AI → 销售", "AI 产品经验，让我开始用工具支持销售。", "产品工作让我学会把需求拆成可实现的方案。在聚宽，我用 AI 辅助编程搭建同行业绩看板，为分析和渠道沟通提供支持。", "一线需求帮助我理解产品，产品能力又帮助我更好地回应客户。"], "zh-HK": ["AI → 銷售", "AI 產品經驗，讓我開始用工具支持銷售。", "產品工作讓我學會把需求拆成可實現的方案。在聚寬，我用 AI 輔助編程搭建同行業績看板，為分析和渠道溝通提供支持。", "前線需求幫助我理解產品，產品能力又幫助我更好地回應客戶。"]}, "science-market": {"nodes": [".n-science", ".l-venture", ".l-milk"], "projects": ["venture", "milk"], "en": ["Science → Market", "Chemistry helped me turn mechanisms into customer value.", "At Lüshui Qingshan, I connected preservation technology with farming and logistics needs. For Mengniu’s self-heating milk project, I connected an internal heating design with the “warm hands, warm stomach” proposition.", "I learned to ask both how something works and why someone would choose it."], "zh-CN": ["技术 → 市场", "理解技术原理，也学着把它转化为客户愿意购买的价值。", "在氯水清山，我把保鲜技术与农场、物流客户的需求联系起来；在蒙牛自热奶项目中，我把内部加热设计转化为“暖手暖胃”的产品主张。", "既问一项技术为什么有效，也问客户为什么会选择它。"], "zh-HK": ["技術 → 市場", "理解技術原理，也學着把它轉化為客戶願意購買的價值。", "在氯水清山，我把保鮮技術與農場、物流客戶的需求聯繫起來；在蒙牛自熱奶項目中，我把內部加熱設計轉化為「暖手暖胃」的產品主張。", "既問一項技術為甚麼有效，也問客戶為甚麼會選擇它。"]}}};
+const experienceOrder = ['join','byte','tencent','baidu','milk','ey','siemens','venture'];
+const groupProjects = {ai:['byte','baidu'],sales:['tencent'],finance:['join','tools'],science:['venture','milk','siemens','ey']};
+const groupName = {en:{ai:'AI & PRODUCT',sales:'SALES & CUSTOMERS',finance:'FINANCE & TRUST',science:'SCIENCE & VENTURES'},'zh-CN':{ai:'AI 与产品',sales:'销售与客户',finance:'金融与信任',science:'科研与创业'},'zh-HK':{ai:'AI 與產品',sales:'銷售與客戶',finance:'金融與信任',science:'科研與創業'}};
+const shortCompany = {byte:'ByteDance',baidu:'Baidu',tencent:'Tencent Ads',join:'JoinQuant',tools:'AI × Sales',venture:'Lüshui Qingshan',milk:'Mengniu',siemens:'Siemens',ey:'EY'};
+const retainedLogos={};
+['join','byte','tencent','baidu','milk','ey','siemens'].forEach((id,i)=>{retainedLogos[id]=document.querySelectorAll('#path .logo')[i]?.outerHTML||''});
+const escapeHTML = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function projectCard(id,lang,compact=false){
+  const p=portfolioData.projects[id],d=p[lang],t=portfolioData.ui[lang];
+  return `<button class="project-card${compact?' compact':''}" data-open="project-${id}"><span class="project-card-top"><small>${escapeHTML(p.date)}</small><span aria-hidden="true">↗</span></span><strong>${escapeHTML(d[0])}</strong><span>${escapeHTML(d[2])}</span><b class="card-action">${t.read}</b></button>`;
+}
+for(const lang of ['en','zh-HK','zh-CN']){
+  const t=portfolioData.ui[lang],catalog=storiesByLanguage[lang];
+  for(const [id,p] of Object.entries(portfolioData.projects)){
+    const d=p[lang];
+    catalog['project-'+id]={tag:`${p.date} · ${d[1]}`,title:d[0],intro:d[2],body:
+      `<div class="case-story-grid">${d.slice(3).map((text,i)=>`<article class="story-step step-${i}"><h3>${t.labels[i]}</h3><p>${escapeHTML(text)}</p></article>`).join('')}</div>`+
+      (p.result?`<div class="case-outcome"><span>${t.result}</span><strong>${escapeHTML(p.result[lang])}</strong></div>`:''),
+      links:[[p.group,groupName[lang][p.group]],['path',t.path]]};
+  }
+  for(const [group,ids] of Object.entries(groupProjects)){
+    catalog[group].body=`<div class="project-index">${ids.map(id=>projectCard(id,lang)).join('')}</div>`;
+  }
+  for(const [id,r] of Object.entries(portfolioData.routes)){
+    const d=r[lang];
+    catalog['route-'+id]={tag:t.routeTag,title:d[0],intro:d[1],body:`<p class="route-narrative">${escapeHTML(d[2])}</p><div class="route-takeaway">${escapeHTML(d[3])}</div><div class="project-index">${r.projects.map(p=>projectCard(p,lang,true)).join('')}</div>`,links:[]};
+  }
+  catalog.quick={tag:'SUNNY CHEN · HONG KONG',title:t.quickTitle,intro:t.quickIntro,
+    body:`<p>${escapeHTML(t.quickSummary)}</p><div class="quick-tags">${t.quickTags.map(s=>`<span>${s}</span>`).join('')}</div><h3>${t.quickProof}</h3><div class="project-index">${['tencent','byte','join','venture'].map(id=>projectCard(id,lang,true)).join('')}</div>`,
+    links:[['path',t.path],['connect',t.contact]]};
+  catalog.cv={tag:lang==='en'?'RESUME':lang==='zh-HK'?'履歷':'简历',title:t.cv,intro:lang==='en'?'Get in touch for a resume relevant to the opportunity.':lang==='zh-HK'?'歡迎聯絡我，索取適合職位方向的履歷。':'欢迎联系我，索取适合职位方向的简历。',body:'',links:[['connect',t.contact]]};
+  catalog.about.links=catalog.about.links.filter(([id])=>id!=='cv');
+  catalog.about.links.unshift(['quick',t.quick]);
+  catalog.life.body=catalog.life.body.replace(/<strong>[^<]*<\/strong>/,'');
+  catalog.path={tag:lang==='en'?'GROWING PATH':lang==='zh-HK'?'成長路徑':'成长路径',title:t.path,intro:t.pathIntro,
+    body:`<div class="journey-list">${experienceOrder.map(id=>{
+      const p=portfolioData.projects[id],d=p[lang];
+      return `<button class="journey-item" data-open="project-${id}"><span class="journey-date">${id==='venture'?t.ventureDate:p.date}</span><span class="journey-brand">${retainedLogos[id]||'<span class="venture-wordmark">'+(lang==='en'?'LQ':'氯水清山')+'</span>'}</span><span class="journey-content"><strong>${escapeHTML(d[0])}</strong><small>${escapeHTML(d[1])}</small><span>${escapeHTML(d[2])}</span></span><span class="journey-arrow" aria-hidden="true">↗</span></button>`;
+    }).join('')}</div>`,links:[['quick',t.quick],['connect',t.contact]]};
+  catalog.cases={tag:lang==='en'?'SELECTED STORIES':lang==='zh-HK'?'精選故事':'精选故事',title:t.cases,intro:t.casesIntro,
+    body:`<div class="project-index">${['tencent','byte','venture','join'].map(id=>projectCard(id,lang)).join('')}</div>`,links:[['path',t.path]]};
+}
+
+for(const id of Object.keys(portfolioData.projects)){
+  const leaf=document.querySelector('.l-'+id);
+  if(leaf){leaf.dataset.open='project-'+id;delete leaf.dataset.topic;}
+}
+document.querySelector('.n-about').dataset.open='quick';
+const overviewButton=document.createElement('button');overviewButton.dataset.open='quick';overviewButton.className='nav-overview';
+document.querySelector('.links').prepend(overviewButton);
+const hubQuick=document.createElement('button');hubQuick.className='button quick-button';hubQuick.dataset.open='quick';
+document.querySelector('.hub .buttons').prepend(hubQuick);
+
+const routeControls=document.createElement('div');routeControls.className='route-controls';routeControls.setAttribute('role','group');
+routeControls.innerHTML=Object.keys(portfolioData.routes).map(id=>`<button class="route-chip" data-route="${id}" aria-pressed="false"></button>`).join('');
+const routeRead=document.createElement('button');routeRead.className='route-read';routeRead.hidden=true;
+document.querySelector('.hub .buttons').before(routeControls,routeRead);
+const routeReset=document.createElement('button');routeReset.className='route-reset';routeReset.hidden=true;routeReset.textContent='×';routeControls.append(routeReset);
+document.querySelector('.hub > p').setAttribute('aria-live','polite');
+let selectedRoute='',previewRoute='';
+function showRoute(id){
+  const map=document.querySelector('.map'),r=portfolioData.routes[id],t=portfolioData.ui[currentLanguage];
+  map.classList.toggle('route-selected',!!r);
+  map.querySelectorAll('.route-node').forEach(n=>n.classList.remove('route-node'));
+  if(r)r.nodes.forEach(sel=>map.querySelector(sel)?.classList.add('route-node'));
+  map.querySelectorAll('[data-route-line]').forEach(p=>p.classList.toggle('route-active',p.dataset.routeLine===id));
+  map.querySelectorAll('[data-route-particle]').forEach(p=>p.classList.toggle('route-active',p.dataset.routeParticle===id));
+  document.querySelectorAll('.route-chip').forEach(b=>{b.classList.toggle('route-preview',b.dataset.route===id);b.setAttribute('aria-pressed',b.dataset.route===selectedRoute?'true':'false');});
+  const p=document.querySelector('.hub > p');p.textContent=r?r[currentLanguage][1]:homeTranslations[currentLanguage].heroText;
+  p.classList.toggle('route-caption',!!r);
+  routeRead.hidden=!r;
+  if(r){routeRead.dataset.open='route-'+id;routeRead.textContent=t.explore;}
+  routeReset.hidden=!selectedRoute;
+}
+function selectRoute(id){selectedRoute=id;previewRoute='';showRoute(id);}
+routeReset.addEventListener('click',()=>selectRoute(''));
+routeControls.querySelectorAll('.route-chip').forEach(b=>{
+  b.addEventListener('click',()=>selectRoute(b.dataset.route));
+  b.addEventListener('mouseenter',()=>{previewRoute=b.dataset.route;showRoute(previewRoute)});
+  b.addEventListener('mouseleave',()=>{previewRoute='';showRoute(selectedRoute)});
+  b.addEventListener('focus',()=>showRoute(b.dataset.route));
+  b.addEventListener('blur',()=>showRoute(selectedRoute));
+});
+const priorHighlight=highlight;
+highlight=function(k){priorHighlight(portfolioData.projects[k?.replace('project-','')]?.group||k);showRoute(previewRoute||selectedRoute);};
+
+// Geometry follows the real node positions so it remains aligned as text and viewport change.
+const previousNetworkDraw=drawNetwork;
+window.removeEventListener('resize',previousNetworkDraw);
+drawNetwork=function(){
+ const map=document.querySelector('.map'),svg=map.querySelector('svg'),rect=map.getBoundingClientRect(),NS='http://www.w3.org/2000/svg';
+ svg.setAttribute('viewBox',`0 0 ${rect.width} ${rect.height}`);svg.innerHTML='';svg.removeAttribute('aria-hidden');svg.setAttribute('role','group');svg.setAttribute('aria-label',portfolioData.ui[currentLanguage].connections);
+ if(window.matchMedia('(max-width:700px)').matches)return;
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const center=sel=>{const q=map.querySelector(sel).getBoundingClientRect();return {x:q.x-rect.x+q.width/2,y:q.y-rect.y+q.height/2}};
+ const line=(a,b,key,route='')=>{
+   const p=center(a),q=center(b),d=`M${p.x},${p.y} Q${(p.x+q.x)/2},${(p.y+q.y)/2-28} ${q.x},${q.y}`;
+   const path=document.createElementNS(NS,'path');path.setAttribute('d',d);path.dataset.wire=key;path.setAttribute('aria-hidden','true');
+   if(route){path.dataset.routeLine=route;path.classList.add('connection-wire');}svg.append(path);
+   if(route){
+     const hit=document.createElementNS(NS,'path');hit.setAttribute('d',d);hit.setAttribute('class','wire-hit');hit.setAttribute('role','button');hit.setAttribute('tabindex','0');hit.setAttribute('aria-label',portfolioData.routes[route][currentLanguage][1]);
+     hit.addEventListener('mouseenter',()=>{previewRoute=route;showRoute(route)});hit.addEventListener('mouseleave',()=>{previewRoute='';showRoute(selectedRoute)});
+     hit.addEventListener('focus',()=>showRoute(route));hit.addEventListener('blur',()=>showRoute(selectedRoute));
+     const activate=()=>{selectRoute(route);openPanel('route-'+route)};
+     hit.addEventListener('click',activate);hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate()}});svg.append(hit);
+     if(!reduced){const dot=document.createElementNS(NS,'circle');dot.setAttribute('r','2.7');dot.setAttribute('class','particle connection-particle');dot.setAttribute('aria-hidden','true');dot.dataset.routeParticle=route;const anim=document.createElementNS(NS,'animateMotion');anim.setAttribute('path',d);anim.setAttribute('dur','5s');anim.setAttribute('repeatCount','indefinite');dot.append(anim);svg.append(dot);}
+   }
+ };
+ for(const k of ['about','ai','sales','science','finance','life'])line('.hub','.n-'+k,k);
+ for(const [g,ids] of Object.entries(groupProjects))for(const id of ids)line('.n-'+g,'.l-'+id,g);
+ line('.l-tencent','.l-byte','bridge','sales-product');line('.l-byte','.l-tools','bridge','ai-sales');
+ line('.n-science','.l-venture','science','science-market');line('.l-venture','.l-milk','science','science-market');
+ showRoute(selectedRoute);
+};
+// Replace the original resize binding as well as the global function.
+window.addEventListener('resize',()=>drawNetwork());
+
+const baseSetLanguage=setLanguage;
+setLanguage=function(lang){
+ baseSetLanguage(lang);
+ const t=portfolioData.ui[currentLanguage];
+ overviewButton.textContent=currentLanguage==='en'?'Quick view':currentLanguage==='zh-HK'?'快速了解':'快速了解';
+ hubQuick.textContent=t.quick;
+ translateNode('.n-about',currentLanguage==='en'?'START HERE / ABOUT SUNNY':currentLanguage==='zh-HK'?'從這裏開始 / SUNNY':'从这里开始 / SUNNY',t.about,t.aboutSub);
+ for(const g of Object.keys(groupProjects)){const small=document.querySelector('.n-'+g+' small');small.textContent=groupName[currentLanguage][g];}
+ routeControls.setAttribute('aria-label',t.connections);routeReset.setAttribute('aria-label',t.reset);routeReset.title=t.reset;
+ routeControls.querySelectorAll('.route-chip').forEach(b=>b.textContent=portfolioData.routes[b.dataset.route][currentLanguage][0]);
+ document.querySelector('.close').setAttribute('aria-label',t.close);
+ document.querySelector('.map').setAttribute('aria-label',currentLanguage==='en'?'Explore Sunny’s experience network':currentLanguage==='zh-HK'?'探索 Sunny 的經歷網絡':'探索 Sunny 的经历网络');
+ document.querySelector('.lower button[data-open="cases"]').textContent=t.cases;
+ document.querySelectorAll('[data-open]').forEach(b=>b.setAttribute('aria-haspopup','dialog'));
+ showRoute(selectedRoute);
+};
+
+// Route every detail view through the same multilingual catalog.
+const baseOpenPanel=openPanel;
+let currentPanelKey='';
+openPanel=function(k){
+ if(!storiesByLanguage[currentLanguage][k])return;
+ currentPanelKey=k;baseOpenPanel(k);
+ document.querySelector('.close').setAttribute('aria-label',portfolioData.ui[currentLanguage].close);
+ content.querySelectorAll('[data-open]').forEach(b=>b.setAttribute('aria-haspopup','dialog'));
+};
+
+
 /* Load saved language; default = English */
 setLanguage(currentLanguage);
 </script>
 </body>
 </html>
+
 
 
